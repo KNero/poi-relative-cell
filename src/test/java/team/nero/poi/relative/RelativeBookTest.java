@@ -10,14 +10,14 @@ import java.io.IOException;
 public class RelativeBookTest {
     @Test
     public void init() throws IOException {
-        RelativeBook book = new RelativeBook("text");
+        RelativeBook book = new RelativeBook("test");
         RelativeSheet sheet = book.getSheet("sheet1");
 
         RelativeCell cell = sheet.getPivotCell("B", 3);
         cell.setValue("1000");
 
         RelativeCell cell1 = cell.next(Direction.RIGHT);
-        cell1.setValue("right");
+        cell1.setValue("RIGHT");
         CellStyle style = cell1.createNewStyleAndGet();
         style.setAlignment(HorizontalAlignment.RIGHT);
 
