@@ -29,6 +29,8 @@ CellStyle style = cell1.getStyle();
 ### create next cell
 ```java
 cell1 = cell.next(Direction.LEFT);
+
+cell1 = cell.next(Direction.RIGHT, 3);
 ```
 ```Direction``` is next cell's direction. 
 
