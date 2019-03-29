@@ -31,5 +31,7 @@ CellStyle style = cell1.getStyle();
 cell1 = cell.next(Direction.LEFT);
 ```
 ```Direction``` is next cell's direction. 
+
 ![](https://github.com/KNero/poi-relative-cell/blob/master/guide.png)
+
 value 1000 is pivot.
