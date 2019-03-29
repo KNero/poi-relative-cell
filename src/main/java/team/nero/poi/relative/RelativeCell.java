@@ -20,8 +20,11 @@ public interface RelativeCell {
      */
     RelativeCell next(Direction direction, int distance);
 
+    void setStyle(CellStyle style);
+
     /**
      * @return this cell's style.
+     * if not call createNewStyleAndGet or setStyleAndGet return null.
      */
     CellStyle getStyle();
 

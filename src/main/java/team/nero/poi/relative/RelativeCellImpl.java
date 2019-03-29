@@ -31,6 +31,11 @@ public class RelativeCellImpl implements RelativeCell {
     }
 
     @Override
+    public void setStyle(CellStyle style) {
+        cell.setCellStyle(style);
+    }
+
+    @Override
     public CellStyle createNewStyleAndGet() {
         return this.setStyleAndGet(toString());
     }
