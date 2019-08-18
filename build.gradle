@@ -3,10 +3,34 @@ plugins {
     id 'java'
 }
 
+group 'team.balam'
+version '0.0.1'
+
+sourceCompatibility = 1.8
+targetCompatibility=1.8
+
 repositories {
     // Use jcenter for resolving your dependencies.
     // You can declare any Maven/Ivy/file repository here.
     jcenter()
+}
+
+publishing {
+    publications {
+        maven (MavenPublication) {
+            groupId = 'team.balam'
+            artifactId = 'poi-relative-cell'
+            version = project.version
+
+            from components.java
+        }
+    }
+
+    repositories {
+        maven {
+            url = "file://Volumes/KSM HD/git/repository/maven"
+        }
+    }
 }
 
 dependencies {
@@ -17,6 +41,9 @@ dependencies {
 
     // This dependency is found on compile classpath of this component and consumers.
     implementation 'com.google.guava:guava:26.0-jre'
+
+    // https://mvnrepository.com/artifact/org.postgresql/postgresql
+    testCompile group: 'org.postgresql', name: 'postgresql', version: '42.1.1'
 
     // Use JUnit test framework
     testImplementation 'junit:junit:4.12'
